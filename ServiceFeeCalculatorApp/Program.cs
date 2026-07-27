@@ -2,7 +2,7 @@
 
 Console.WriteLine( "\tSERVICEFEECALCULATORAPP\n" );
 
-Console.WriteLine( "ENTER THE JOB TO BE DONE\n> " );
+Console.WriteLine( "ENTER THE JOB TO BE DONE:" );
 string job = Console.ReadLine() ?? string.Empty;
 RepairJob? typeOfJob = null;
 Console.WriteLine( typeOfJob?.JobDescription( job ) );
@@ -12,8 +12,8 @@ Console.WriteLine( typeOfJob?.JobDescription( job ) );
 bool valid = false;
 while ( !valid )
 {
-    Console.WriteLine( "Enter type of repair job: B/b for Basic, or type 'Q/q' to quit." +
-        "R/r for Regular, C/c for Complex" );
+    Console.WriteLine( "ENTER TYPE OF REPAIR JOB: B/b for Basic, R/r for Regular, C/c for Complex" +
+        "or type 'Q/q' to quit." );
     string prompt = Console.ReadLine() ?? string.Empty;
     string userInput = prompt.ToLower().Trim();
     if ( userInput == "q" ) { return; }
