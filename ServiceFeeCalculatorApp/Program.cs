@@ -39,3 +39,6 @@ while ( !valid )
 }
 
 #endregion
+
+// TODO: Implement the logic to calculate and display the service fee based on
+// the selected repair job type.
