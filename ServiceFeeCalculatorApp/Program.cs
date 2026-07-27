@@ -2,6 +2,7 @@
 
 Console.WriteLine( "\tSERVICEFEECALCULATORAPP\n" );
 
+// TODO: Implement check for valid user input and handle invalid input gracefully.
 Console.WriteLine( "ENTER THE JOB TO BE DONE:" );
 string job = Console.ReadLine() ?? string.Empty;
 RepairJob? typeOfJob = null;
