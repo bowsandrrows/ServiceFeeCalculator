@@ -6,11 +6,17 @@ namespace ServiceFeeCalculator.Models
 {
     public class RegularRepairJob : RepairJob
     {
+        override public string JobDescription( string description )
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            return $"JOB: {description}.";  
+        }
         // Displaying the fee for a regular repair job
         override public void JobCostDisplay()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine( "REGULAR REPAIR\r\nDone by a senior mechanic\r\n80€ per" +
+            Console.WriteLine( "REGULAR REPAIR:\r\nDone by a senior mechanic\r\n80€ per" +
                 " started hour\r\nMust be paid even if repairing was not possible!" );
             Console.WriteLine( "\t--------------" );
         }

@@ -14,7 +14,7 @@
 
         // param "description" => The description text to assign to the job.
         // The assigned description.
-        public string JobDescription(string description) => Description = description;
+        public abstract string JobDescription(string description );
 
         // Abstract method to calculate the fee for the repair job. Must be implemented by
         // derived classes.

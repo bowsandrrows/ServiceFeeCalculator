@@ -2,11 +2,10 @@
 
 Console.WriteLine( "\tSERVICEFEECALCULATORAPP\n" );
 
-// TODO: Implement check for valid user input and handle invalid input gracefully.
-Console.WriteLine( "ENTER THE JOB TO BE DONE:" );
+Console.WriteLine( "\tWELCOME TO THE CAR REPAIR SERVICE!\nWHAT TYPE OF REPAIR JOB WOULD YOU " +
+        "LIKE TO SCHEDULE?\n" );
 string job = Console.ReadLine() ?? string.Empty;
-RepairJob? typeOfJob = null;
-Console.WriteLine( typeOfJob?.JobDescription( job ) );
+Console.WriteLine( $"YOU HAVE SCHEDULED: {job}.\n" );
 
 #region User imput
 
@@ -15,8 +14,8 @@ while ( !valid )
 {
     Console.WriteLine( "ENTER TYPE OF REPAIR JOB: B/b for Basic, R/r for Regular, C/c for Complex" +
         "or type 'Q/q' to quit." );
-    string prompt = Console.ReadLine() ?? string.Empty;
-    string userInput = prompt.ToLower().Trim();
+    string prompt_1 = Console.ReadLine() ?? string.Empty;
+    string userInput = prompt_1.ToLower().Trim();
     if ( userInput == "q" ) { return; }
 
     RepairJob? repairJob = userInput switch
@@ -29,7 +28,10 @@ while ( !valid )
 
     if ( repairJob != null )
     {
+        Console.WriteLine(repairJob.JobDescription( job ));
+        
         repairJob.JobCostDisplay();
+
         Console.WriteLine( $"Fee: {repairJob.CalculateFee()}€" );
         valid = true;
     }
