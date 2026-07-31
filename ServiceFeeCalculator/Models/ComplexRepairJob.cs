@@ -9,7 +9,7 @@ namespace ServiceFeeCalculator.Models
         override public string JobDescription( string description )
         {
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             return $"JOB: {description}.";
         }
         override public void JobCostDisplay()
